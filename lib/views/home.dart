@@ -4,6 +4,8 @@ import 'package:newsapp/models/category_model.dart';
 import 'package:newsapp/helper/helper.dart';
 import 'package:newsapp/helper/news.dart';
 import 'package:newsapp/models/aricle_model.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:newsapp/views/article_view.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -84,7 +86,8 @@ class _HomeState extends State<Home> {
                             return Feeds(
                                 imageUrl: newsFeeds[index].imageUrl,
                                 title: newsFeeds[index].title,
-                                description: newsFeeds[index].description);
+                                description: newsFeeds[index].description,
+                                url: newsFeeds[index].url);
                           },
                           itemCount: newsFeeds.length,
                         ),
@@ -110,8 +113,8 @@ class CategoryTitle extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(6),
-              child: Image.network(
-                imageUrl,
+              child: CachedNetworkImage(
+                imageUrl: imageUrl,
                 width: 120,
                 height: 60,
                 fit: BoxFit.cover,
@@ -137,36 +140,45 @@ class CategoryTitle extends StatelessWidget {
 }
 
 class Feeds extends StatelessWidget {
-  Feeds({this.imageUrl, this.title, this.description});
+  Feeds({this.imageUrl, this.title, this.description, this.url});
 
-  final imageUrl, title, description;
+  final imageUrl, title, description, url;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 24),
-      child: Column(
-        children: [
-          ClipRRect(
-            child: Image.network(imageUrl),
-            borderRadius: BorderRadius.circular(6),
-          ),
-          SizedBox(height: 5,),
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w500,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ArticleView(
+          url
+        )));
+      },
+      child: Container(
+        margin: EdgeInsets.only(bottom: 24),
+        child: Column(
+          children: [
+            ClipRRect(
+              child: CachedNetworkImage(imageUrl: imageUrl),
+              borderRadius: BorderRadius.circular(6),
             ),
-          ),
-          
-          SizedBox(height: 10,),
-          Text(description,
-            style: TextStyle(
-              
-              color: Colors.black45
-            ),)
-        ],
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              description,
+              style: TextStyle(color: Colors.black45),
+            )
+          ],
+        ),
       ),
     );
   }

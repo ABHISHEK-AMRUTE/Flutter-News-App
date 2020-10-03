@@ -8,7 +8,7 @@ class News {
 
   Future<void> getNews() async {
     String url =
-        "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=fb558bec17f449d5a55ec30cd35d80c7";
+        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=fb558bec17f449d5a55ec30cd35d80c7";
 
     var response = await http.get(url);
 
