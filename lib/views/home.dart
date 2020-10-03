@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
     categories = getCataegories();
     getNews();
@@ -58,38 +58,42 @@ class _HomeState extends State<Home> {
                 ),
               )
             : Container(
-                child: Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.all(5),
-                      height: 80,
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return CategoryTitle(
-                              imageUrl: categories[index].imageUrl,
-                              categoryName: categories[index].contegoryName);
-                        },
-                        itemCount: categories.length,
+                child: SingleChildScrollView(
+                                  child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(5),
+                        height: 80,
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return CategoryTitle(
+                                imageUrl: categories[index].imageUrl,
+                                categoryName: categories[index].contegoryName);
+                          },
+                          itemCount: categories.length,
+                        ),
                       ),
-                    ),
 
-                    //news feeds
-                    Container(
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.vertical,
-                        itemBuilder: (context, index) {
-                          return Feeds(
-                              imageUrl: newsFeeds[index].imageUrl,
-                              title: newsFeeds[index].title,
-                              description: newsFeeds[index].description);
-                        },
-                        itemCount: newsFeeds.length,
-                      ),
-                    )
-                  ],
+                      //news feeds
+                      
+                           Container(
+                          child: ListView.builder(
+                            shrinkWrap: true,
+                            scrollDirection: Axis.vertical,
+                            itemBuilder: (context, index) {
+                              return Feeds(
+                                  imageUrl: newsFeeds[index].imageUrl,
+                                  title: newsFeeds[index].title,
+                                  description: newsFeeds[index].description);
+                            },
+                            itemCount: newsFeeds.length,
+                          ),
+                        ),
+                      
+                    ],
+                  ),
                 ),
               ));
   }
