@@ -10,7 +10,7 @@ This is a Flutter Based simple News Application.
 
 # Setup
 
-First thing first login to newsApi.org.<br>
+First thing first login to [newsApi.org](https://newsapi.org/).<br>
 Get your API key.<br>
 Clone this repository.
 <br>Paste keys inside lib/keys/key.dart<br>
