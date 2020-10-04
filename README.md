@@ -19,6 +19,7 @@ Hit run. :)
 # Let's discuss
   
   [Telegram Group](https://t.me/joinchat/OKSLQBoBNquemTZD4gO9sQ) 
+  Please leave a star if you like this repository.
 
 # Open For Hacktoberfest
 
