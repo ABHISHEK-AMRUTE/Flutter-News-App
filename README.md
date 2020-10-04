@@ -1,16 +1,24 @@
-# newsapp
+# FastNews
 
-A new Flutter project.
+This is a Flutter Based simple News Application.
 
-## Getting Started
+# Screenshots
+<img src="images/sc1.jpeg" alt="drawing" style="width:200px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/sc2.jpeg" alt="drawing" style="width:200px;"/>
 
-This project is a starting point for a Flutter application.
+# Setup
 
-A few resources to get you started if this is your first Flutter project:
+First thing first login to newsApi.org.<br>
+Get your API key.<br>
+Clone this repository.
+<br>Paste keys inside lib/keys/key.dart<br>
+Hit run. :)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Let's discuss
+  
+  [Telegram Group](https://t.me/joinchat/OKSLQBoBNquemTZD4gO9sQ) 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Open For Hacktoberfest
+
+This repository is open for hacktoberfest. Kick start your Open Source journey. Happy Coding :)
+

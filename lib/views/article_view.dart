@@ -21,7 +21,7 @@ class _ArticleViewState extends State<ArticleView> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Flutter"),
+              Text("Fast"),
               Text(
                 'News',
                 style: TextStyle(color: Colors.blue),
