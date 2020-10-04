@@ -3,8 +3,8 @@
 This is a Flutter Based simple News Application.
 
 # Screenshots
-<img src="images/sc1.jpeg" alt="drawing" style="width:200px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="images/sc2.jpeg" alt="drawing" style="width:200px;"/>
+<img src="images/sc1.jpeg" alt="drawing" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/sc2.jpeg" alt="drawing" width="200"/>
 
 # Setup
 
