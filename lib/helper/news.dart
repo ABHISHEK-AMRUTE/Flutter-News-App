@@ -2,13 +2,16 @@ import 'dart:convert';
 
 import 'package:newsapp/models/aricle_model.dart';
 import 'package:http/http.dart' as http;
+import 'package:newsapp/keys/key.dart';
 
 class News {
   List<ArticleModel> feeds = [];
 
   Future<void> getNews() async {
+    Keys obj = Keys();
+    String keyCode = obj.getKey();
     String url =
-        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=fb558bec17f449d5a55ec30cd35d80c7";
+        "http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=$keyCode";
 
     var response = await http.get(url);
 
