@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/views/home.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+import './views/greet_screen.dart';
+
+bool cityCaptured = false;
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences pref = await SharedPreferences.getInstance(); // S
+  cityCaptured = pref.getBool('cityCaptured');
+
+  print(cityCaptured);
   runApp(MyApp());
 }
 
@@ -16,11 +25,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-       home: Home(),
-       debugShowCheckedModeBanner: false,
-       theme: ThemeData(
-         primaryColor: Colors.white
-       ),
+      home: cityCaptured == null ? GreetScreen() : Home(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: Colors.white),
     );
   }
 }
