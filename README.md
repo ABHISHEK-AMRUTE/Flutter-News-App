@@ -2,6 +2,7 @@
 
 This is a Flutter Based simple News Application.
 
+
 # Screenshots
 <img src="images/image1.jpeg" alt="drawing" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="images/image3.jpeg" alt="drawing" width="200"/>
@@ -28,5 +29,5 @@ To replace the icon on the splash screen:
 
 # Open For Hacktoberfest
 
-This repository is open for hacktoberfest. Kick start your Open Source journey. Happy Coding :)
+This repository is open for hacktoberfest so create your PR now. Kick start your Open Source journey. Happy Coding :)
 
